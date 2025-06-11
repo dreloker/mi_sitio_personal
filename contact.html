@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <header class="header scrollstop">
+    <div class="contenedor">
+      <div class="barra">
+        <a class="logo" href="index.html">
+          <h1 class="logo__nombre no-margin centrar-texto">Mi<span class="logo__bold">Proyecto</span></h1>
+        </a>
+        <nav class="navegacion">
+          <a href="index.html" class="navegacion__enlace">Inicio</a>
+          <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+        </nav>
+      </div>
+    </div>
+    <div class="header__texto">
+      <h2 class="no-margin">Formulario de Contacto</h2>
+      <p class="no-margin">Déjanos tu mensaje y te responderemos pronto</p>
+    </div>
+  </header>
+
+  <main class="contenedor-cont scrollstop">
+    <h3 class="centrar-texto">Contacto</h3>
+    <div class="contacto-bg"></div>
+
+    <form class="formulario" name="contact" method="POST" data-netlify="true">
+      <div class="campo">
+        <label class="campo__label" for="nombre">Nombre</label>
+        <input class="campo__field" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+      </div>
+
+      <div class="campo">
+        <label class="campo__label" for="email">E-mail</label>
+        <input class="campo__field" type="email" id="email" name="email" placeholder="Tu e-mail" required />
+      </div>
+
+      <div class="campo">
+        <label class="campo__label" for="mensaje">Mensaje</label>
+        <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" required></textarea>
+      </div>
+
+      <div class="campo boton--cont">
+        <button type="submit" class="boton boton--primario boton--cont">Enviar</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer scrollstop">
+    <div class="contenedor">
+      <div class="barra">
+        <a class="logo" href="index.html">
+          <h1 class="logo__nombre no-margin centrar-texto">Mi<span class="logo__bold">Proyecto</span></h1>
+        </a>
+        <nav class="navegacion">
+          <a href="index.html" class="navegacion__enlace">Inicio</a>
+          <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
