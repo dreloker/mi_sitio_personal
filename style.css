@@ -1,0 +1,78 @@
+  :root {
+    /*Colores*/
+    --primario: #0c9c84;
+    --secundario: #185c8a;
+    --blanco: #f8f7ec;
+    --negros: #32394d;
+    --medios: #787a6d;
+  }  
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--negros);
+    color: var(--blanco);
+  }
+  
+  header {
+    width: 100%;
+    padding: 1.5rem 0;
+
+  }
+
+  .contenedor-header {
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo:visited {
+    color: var(--blanco)
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+
+  .navegacion {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .navegacion__enlace {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .navegacion__enlace:hover {
+    color: var(--primario)
+  } 
+
+  .navegacion__enlace:active {
+  color: var(--secundario);
+  }
+
+  .navegacion__enlace:focus {
+  outline: none;
+  }
+
+  main {
+    padding: 2rem;
+    padding-bottom: 5rem;
+  }
+  
+  footer {
+    background-color: black;
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
