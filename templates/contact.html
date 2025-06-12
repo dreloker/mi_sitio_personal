@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koud - Contacto</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href= "{{ url_for('static', filename='css/style.css') }}" />
 </head>
 <body>
 
@@ -24,6 +24,12 @@
             <div class="contacto-wrapper">
                 <div class="contacto-bg">
                 <h1 class="centrar-texto">Contacto</h1>
+
+                  {% if enviado %}
+                        <p>¡Gracias por contactarnos! Hemos recibido tu mensaje.</p>
+
+                    {% else %}
+
                     <form class="formulario" method="POST" action="/contact">
                         <div class="campo">
                             <label class="campo__label" for="nombre">Nombre</label>
@@ -38,12 +44,13 @@
                         <div class="campo">
                             <label class="campo__label" for="mensaje">Mensaje</label>
                             <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" required></textarea>
-                        </div>
+                        </div>                      
 
                         <div class="campo boton--cont">
                             <button type="submit" class="boton boton--primario boton--cont">Enviar</button>
                         </div>
                     </form>
+                    {% endif %}
                 </div>
             </div>
         </main>
