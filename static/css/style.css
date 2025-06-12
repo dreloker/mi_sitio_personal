@@ -1,5 +1,6 @@
+    /*Globales*/
+  
   :root {
-    /*Colores*/
     --primario: #0c9c84;
     --secundario: #185c8a;
     --blanco: #f8f7ec;
@@ -13,7 +14,15 @@
     padding: 0;
     background-color: var(--negros);
     color: var(--blanco);
+    font-size: 1rem;
+
   }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+
+}
+
   
   header {
     width: 100%;
@@ -21,6 +30,24 @@
 
   }
 
+  main {
+    padding: 2rem;
+    padding-bottom: 5rem;
+    
+  }
+  
+  footer {
+    background-color: black;
+    color: var(--blanco);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+
+
+/*Inicio*/
+  
   .contenedor-header {
     margin: 0 auto;
     padding: 0 2rem;
@@ -62,17 +89,36 @@
   outline: none;
   }
 
-  main {
-    padding: 2rem;
-    padding-bottom: 5rem;
-  }
-  
-  footer {
-    background-color: black;
-    color: var(--blanco);
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
+  /* Contacto ---------------------------*/
+
+  .contacto-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+  .contacto-bg {
     width: 100%;
-    bottom: 0;
+    max-width: 720px;
+    background-color: var(--secundario);
+    padding: 5rem;
+  }
+
+  .campo {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    flex-direction: column;  
+  }
+
+  .campo__field {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: var(--negros);
+    color: var(--blanco);
+  }
+
+  .campo__field--textarea {
+      height: 10rem;
+      resize: none;
   }

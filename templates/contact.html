@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koud - Contacto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+      <header>
+        <div class="contenedor-header">
+          <a class="logo" href="index.html">
+            <h1>Koud</h1>
+          </a>
+          <nav class="navegacion">
+            <a href="{{ url_for('index') }}" class="navegacion__enlace">Inicio</a>
+            <a href="{{ url_for('contact') }}" class="navegacion__enlace">Contacto</a>
+          </nav>
+        </div>
+      </header>
+    
+        <main class="contenedor-cont scrollstop">
+            <div class="contacto-wrapper">
+                <div class="contacto-bg">
+                <h1 class="centrar-texto">Contacto</h1>
+                    <form class="formulario" method="POST" action="/contact">
+                        <div class="campo">
+                            <label class="campo__label" for="nombre">Nombre</label>
+                            <input class="campo__field" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label" for="email">E-mail</label>
+                            <input class="campo__field" type="email" id="email" name="email" placeholder="Tu e-mail" required />
+                        </div>
+
+                        <div class="campo">
+                            <label class="campo__label" for="mensaje">Mensaje</label>
+                            <textarea class="campo__field campo__field--textarea" id="mensaje" name="mensaje" required></textarea>
+                        </div>
+
+                        <div class="campo boton--cont">
+                            <button type="submit" class="boton boton--primario boton--cont">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    
+      <footer>
+        <p>&copy; 2025 - Koud diseño</p>
+      </footer>
+
+</body>
+</html>
