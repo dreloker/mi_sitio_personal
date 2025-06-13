@@ -58,18 +58,16 @@
     display: block;
   }
 
-/*Inicio*/
-  
+
+  /*Inicio - header*/
+
   .contenedor-header {
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .logo h1 {
-    margin: 0;
+    z-index: 1;
   }
 
   .navegacion {
@@ -95,6 +93,57 @@
   .navegacion__enlace:focus {
   outline: none;
   }
+
+  
+  /*Inicio - círculos*/
+
+  .circulos-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 900px;
+    height: 900px;
+    margin: 5rem auto;
+    transform-origin: center center;
+  }
+
+  .circulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    pointer-events: auto;
+    background: linear-gradient(45deg, var(--primario), var(--secundario));
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+  }
+
+  .c1 { width: 900px; height: 900px;}
+  .c2 { width: 720px; height: 720px;}
+  .c3 { width: 540px; height: 540px;}
+  .c4 { width: 360px; height: 360px;}
+  .c5 { width: 180px;  height: 180px;}
+
+    @keyframes girar {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  /*Inicio - contenido*/
+
+  .contenido-hero {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: left;
+  padding: 5rem 2rem;
+  pointer-events: none;
+  }
+
+   .btn-cta {
+  pointer-events: auto;
+  }
+
 
   /* Contacto ---------------------------*/
 
