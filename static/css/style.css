@@ -1,27 +1,31 @@
     /*Globales*/
   
   :root {
-    --primario: #0c9c84;
+    --primario: #71ffe7;
     --secundario: #185c8a;
-    --blanco: #f8f7ec;
-    --negros: #32394d;
-    --medios: #787a6d;
-  }  
+    --blanco: #ecf8f7;
+    --negros: #000000;
+    --medios: #171717;
+  }
+  
+  html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden; /* para evitar scroll lateral */
+  }
   
   body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--negros);
     color: var(--blanco);
     font-size: 1rem;
-
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), var(--medios), var(--negros));
+    transition: background 0.1s ease; 
   }
 
   *, *:before, *:after {
     box-sizing: inherit;
-
-}
+  }
   
   header {
     width: 100%;
@@ -97,13 +101,13 @@
   .contacto-wrapper {
   display: flex;
   justify-content: center;
-}
+  }
 
   .contacto-bg {
     width: 100%;
     max-width: 720px;
-    background-color: var(--secundario);
-    padding: 5rem;
+    padding: 3vh;
+    background-color: var(--medios);
   }
 
   .campo {
@@ -115,7 +119,7 @@
 
   .campo__field {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem 0 0.5rem 0.5rem;
     border: none;
     background-color: var(--negros);
     color: var(--blanco);
